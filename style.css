@@ -1,9 +1,9 @@
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap");
 
 body {
   font-size: var(--font-size-b1);
   line-height: 18px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: #878e99;
   font-weight: 400;
 }
@@ -43,6 +43,10 @@ ul li {
   color: #878e99;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* Header css style */
 
 .rn-header.header--fixed {
@@ -68,21 +72,18 @@ ul li {
 .header-wrapper {
   height: 122px;
   padding: 0 64px;
-  background-color: yellow;
 }
 
 .header-wrapper .header-left {
   flex-basis: 20%;
   justify-content: flex-start;
   display: flex;
-  background-color: red;
 }
 
 .header-wrapper .header-center {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  background-color: green;
 }
 
 .main_menu .primary_menu {
@@ -98,11 +99,59 @@ ul li {
   transition: 0.3s;
 }
 
-.mainmenu-nav .primary-menu li a {
-  color: white;
+.main_menu .primary_menu li a {
+  color: #c4cfde;
   position: relative;
   transition: 0.4s;
   font-size: 13px;
   font-weight: 400;
   text-transform: uppercase;
+}
+
+.main_menu .primary_menu li a  {
+    opacity: 0.5;
+}
+
+.main_menu .primary_menu li a:hover {
+    opacity: 1!important;
+    color: white;
+}
+/* Header button design - right button */
+.header-wrapper .header_right {
+  margin-left: 30px;
+  justify-content: flex-end;
+  display: flex;
+  margin-right: -18px;
+}
+
+a.header_btn{
+  border-radius: 6px;
+  background: linear-gradient(145deg, #1e2024, #23272b);
+  box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
+  transition: 0.4s;
+  position: relative;
+  z-index: 2;
+  font-size: 14px;
+  font-weight: 500;
+  border: 0 none;
+  display: inline-block;
+  padding: 15px 35px;
+  list-style: none;
+  text-decoration: none;
+  color: #ff014f;
+  font-weight: bold;
+}
+
+a.header_btn::before {
+  content: "";
+  position: absolute;
+  transition: var(--transition);
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to right bottom, #212428, #16181c);
+  opacity: 0;
+  z-index: -1;
 }
