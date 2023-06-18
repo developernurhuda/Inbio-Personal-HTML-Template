@@ -108,14 +108,17 @@ a {
   text-transform: uppercase;
 }
 
-.main_menu .primary_menu li a  {
-    opacity: 0.5;
+.main_menu .primary_menu li a:hover {
+  opacity: 1;
+  color:white;
 }
 
-.main_menu .primary_menu li a:hover {
-    opacity: 1!important;
-    color: white;
+
+
+.main_menu:hover .primary_menu li a:not(:hover) {
+  opacity: 0.5;
 }
+
 /* Header button design - right button */
 .header-wrapper .header_right {
   margin-left: 30px;
@@ -124,7 +127,7 @@ a {
   margin-right: -18px;
 }
 
-a.header_btn{
+a.header_btn {
   border-radius: 6px;
   background: linear-gradient(145deg, #1e2024, #23272b);
   box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
